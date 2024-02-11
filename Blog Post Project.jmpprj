@@ -1,0 +1,57 @@
+﻿/* JMP 15.2.0 */
+New Project(
+	Run Script(
+		Open(
+			"Subset of nc cyclist crash data table.jmp",
+			Set Window ID( "00a079eb-e4fa-ed4e-9dd2-263e1c38b59d" ),
+			invisible
+		);
+		Open(
+			"nc cyclist crash data table.jmp",
+			Set Window ID( "f2110dbe-4e25-d14a-b172-83f78d11d0d8" )
+		);
+		Open(
+			"Subset_Fall Back Only.jmp",
+			Set Window ID( "c71d6d1c-5b7d-a04e-99ab-a726ba4e2135" )
+		);
+	),
+	Set Layout(
+		H Splitter Box(
+			Size( 1280, 625 ),
+			<<Set Sizes( {0.01, 0.99} ),
+			<<Dockable(),
+			V Splitter Box(
+				Size( 7, 625 ),
+				<<Set Sizes( {0.33, 0.33, 0.33} ),
+				<<Dockable(),
+				Tab Page Box(
+					Title( "Window List" ),
+					Window ID( "Window List" )
+				),
+				Tab Page Box(
+					Title( "Bookmarks" ),
+					Window ID( "Bookmarks" )
+				),
+				Tab Page Box(
+					Title( "Recent Files" ),
+					Window ID( "Recent Files" )
+				)
+			),
+			Tab Box(
+				<<Dockable(),
+				Tab Page Box(
+					Title( "nc cyclist crash data table" ),
+					Window ID(
+						"f2110dbe-4e25-d14a-b172-83f78d11d0d8"
+					)
+				),
+				Tab Page Box(
+					Title( "Subset_Fall Back Only" ),
+					Window ID(
+						"c71d6d1c-5b7d-a04e-99ab-a726ba4e2135"
+					)
+				)
+			)
+		)
+	)
+)
